@@ -30,3 +30,17 @@
 *.exe
 *.out
 *.app
+/.DS_Store
+
+# Ignore lib folders
+# /lib
+
+.idea/
+/cmake-build-debug
+/sample
+/lib/.DS_Store
+/lib/googletest
+/lib/yaml-cpp
+/lib/curlpp
+/lib/curlpp/Readme.md
+/cmake-build-debug-mingw
