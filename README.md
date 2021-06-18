@@ -1,8 +1,12 @@
 # Example READ file from the cloud
 
-The following example is to demostrate how to use external libraries to read files from cloud.
+The following example demonstrates how to use and link external libraries (CURL) to a C++ project with a CMake configuration. The objective of this example is to create a GET request for a website in the cloud.
 
 ## Description of the usage
+
+### Video tutorial
+
+https://youtu.be/ho9f0WiA-1o
 
 ### Requirements
 
