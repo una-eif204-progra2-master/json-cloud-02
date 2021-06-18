@@ -14,7 +14,45 @@ https://youtu.be/ho9f0WiA-1o
 - Build Tool: [CMake](https://cmake.org/)
 - Git access to: [Curl Library](https://github.com/curl/curl)
 
+### Building using vcpkg
+
+#### x86-Windows
+
+```bash
+git clone https://github.com/Microsoft/vcpkg.git
+cd vcpkg
+C:\vcpkg>bootstrap-vcpkg.bat
+C:\vcpkg>vcpkg.exe integrate install
+C:\vcpkg>vcpkg.exe install curl[tool]
+```
+
+#### x64-Windows
+
+```bash
+git clone https://github.com/Microsoft/vcpkg.git
+cd vcpkg
+C:\vcpkg>bootstrap-vcpkg.bat
+C:\vcpkg>vcpkg.exe integrate install
+C:\vcpkg>vcpkg.exe install curl:x64-windows
+```
+
 ## CMake configuration
+
+### CMake Options
+
+#### x64-Windows
+
+```properties
+-DVCPKG_TARGET_TRIPLET=x64-windows 
+-DCMAKE_TOOLCHAIN_FILE=C:<your-location-inpc>/vcpkg/scripts/buildsystems/vcpkg.cmake
+```
+
+#### x86-Windows
+
+```properties
+-DVCPKG_TARGET_TRIPLET=x86-windows 
+-DCMAKE_TOOLCHAIN_FILE=C:<your-location-inpc>/vcpkg/scripts/buildsystems/vcpkg.cmake
+```
 
 #### CMakeList.txt Top Level
 
